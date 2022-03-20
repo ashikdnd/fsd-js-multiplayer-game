@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Game</title>
+	<link rel="stylesheet" href="assets/app.css">
+	<link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+
+	<script src="assets/jquery.min.js"></script>
+	<script src="assets/bootstrap/bootstrap.min.js"></script>
+
+
+	<script src="assets/app.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="scoreboard">
+			<div class="player-scoreboard text-center">
+				<div class="p1-health"></div>
+				<span class="player-name">Player 1 <span id="p1-health">(100%)</span></span>
+			</div>
+			<div class="vs text-center">VS</div>
+			<div class="player-scoreboard text-center">
+				<div class="p2-health"></div>
+				<span class="player-name">Player 2 <span id="p2-health">(100%)</span></span>
+			</div>
+		</div>
+
+		<div class="row mt-30 buttons">
+			<div class="col text-center p1-btn">
+				<div class="mb-10">
+					<button type="button" class="btn btn-danger" onclick="attackPlayer('p2')">Attack</button>
+				</div>
+				<div class="defend-btn">
+					<button type="button" class="btn btn-outline-info" onclick="defend('p1', event)">Defend</button>
+				</div>
+			</div>
+			<div class="col text-center p2-btn">
+				<div class="col text-center">
+					<div class="mb-10">
+						<button type="button" class="btn btn-danger" onclick="attackPlayer('p1')">Attack</button>
+					</div>
+					<div class="defend-btn">
+						<button type="button" class="btn btn-outline-info" onclick="defend('p2')">Defend</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-30 text-center">
+			<span class="big-font game-status">START</span>
+			<div class="text-center">
+				<img class="win-img" src="https://media.giphy.com/media/IIJpyNVX37NAI/giphy.gif" alt="" style="
+    margin-top: 24px;
+    border-radius: 5px;
+    display: none;
+">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
